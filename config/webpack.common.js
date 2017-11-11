@@ -44,10 +44,10 @@ module.exports = function(options = {}) {
         {
           test: /\.css/,
           loaders: [
-            ExtractTextPlugin.extract({
-              fallback: "style-loader",
-              loader: 'css-loader'
-            }),
+            // ExtractTextPlugin.extract({
+            //   fallback: "style-loader",
+            //   loader: 'css-loader'
+            // }),
             'to-string-loader',
             'css-loader',
             'postcss-loader?sourceMap',
@@ -56,10 +56,10 @@ module.exports = function(options = {}) {
         {
           test: /\.scss$/,
           loaders: [
-            ExtractTextPlugin.extract({
-              fallback: 'style-loader',
-              loader: 'css-loader'
-            }),
+            // ExtractTextPlugin.extract({
+            //   fallback: 'style-loader',
+            //   loader: 'css-loader'
+            // }),
             'to-string-loader',
             'css-loader',
             'postcss-loader?sourceMap',
