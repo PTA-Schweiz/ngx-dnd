@@ -65,6 +65,14 @@ export class DrakeStoreService {
       return false;
     };
 
+    const copySortSource = (el: any, source: any) => {
+      const sourceComponent = this.droppableMap.get(source);
+      if (sourceComponent) {
+        return sourceComponent.copySortSource;
+      }
+      return false;
+    };
+
     const moves = (el: any, source: any, handle: any, sibling: any) => {
       const elementComponent = this.draggableMap.get(el);
       if (elementComponent) {
@@ -73,7 +81,7 @@ export class DrakeStoreService {
       return true;
     };
 
-    return {accepts, copy, moves, revertOnSpill: true};
+    return {accepts, copy, moves, copySortSource, revertOnSpill: true};
   }
 
   registerEvents(): void {

@@ -32,6 +32,7 @@ function getNextId() {
 export class DroppableDirective implements OnInit, OnDestroy, AfterViewInit {
   @Input() model: any;
   @Input() copy = false;
+  @Input() copySortSource = false;
   @Input() removeOnSpill = false;
   @Input() ngxDroppable: string;
 
